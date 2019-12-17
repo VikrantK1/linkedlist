@@ -115,7 +115,7 @@ class Linklist{
     }
 
 }
-public class mylist {
+public class dubley_link_list {
     public static void main(String []vk)
     {
       // Scanner data=new Scanner(System.in);
@@ -123,9 +123,9 @@ public class mylist {
         for (int i = 1; i <8 ; i++) {
         list.insert(i);
     }
-        for (int i = 1; i <8 ; i++) {
-            list.insert_start(i);
-        }
+//        for (int i = 1; i <8 ; i++) {
+//            list.insert_start(i);
+//        }
      //   list.insert23(1,664);
        // list.delete_element(4);
        // list.insert_start(56);
