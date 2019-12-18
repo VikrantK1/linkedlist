@@ -70,7 +70,36 @@ class linklist34{
        {
            head=head.next;
        }
-       public void delete_postion(int pos)
+       public void delete_value(int pos)
+       {
+           node34 node=head;
+           int i=0;
+           int check=0;
+           while (node.next!=null)
+           {
+               i++;
+               if (node.next.values==pos)
+               {
+                   check=1;
+                   break;
+               }
+
+               node=node.next;
+           }
+           if (i==0)
+           {
+               delete_first_node();
+           }
+           else if (check==1)
+           {
+               node.next=node.next.next;
+           }
+           else
+           {
+               System.out.println("there is no data of this name");
+           }
+       }
+       public void delete_position(int pos)
        {
            node34 node=head;
            node34 temp;
@@ -83,17 +112,32 @@ class linklist34{
            node.next=temp.next;
        }
 
+       public void delete_end()
+       {
+           node34 node=head;
+           node34 temp=null;
+
+           while (node.next.next!=null)
+           {
+
+               node=node.next;
+           }
+           node.next=null;
+       }
+
 }
 public class single_link_list{
     public static void main(String[] vk)
     {
    linklist34 linklist34=new linklist34();
-        for (int i = 1; i <7 ; i++) {
+        for (int i = 78; i <90 ; i++) {
             linklist34.insert(i);
         }
        // linklist34.insert_pos(2,4754);
        // linklist34.delete_first_node();
-        linklist34.delete_postion(2);
+        //linklist34.delete_position(4);
+       // linklist34.delete_end();
+        linklist34.delete_value(89);
    linklist34.show();
     }
 }
